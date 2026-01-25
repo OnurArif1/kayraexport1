@@ -1,3 +1,0 @@
-﻿<Project>
-  <Import Project="../build/Artemis.API.props" />
-</Project>
