@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "/mhL7feSlhg=",
+  "dgSpecHash": "HVSXEgLtTsU=",
   "success": true,
-  "projectFilePath": "/Users/onurarifciftci/Desktop/kayraexport/src/KayraExport.API/KayraExport.API.csproj",
+  "projectFilePath": "/Users/onurarifciftci/kayraexport1/kayraexport/src/KayraExport.API/KayraExport.API.csproj",
   "expectedPackageFiles": [
     "/Users/onurarifciftci/.nuget/packages/humanizer.core/2.14.1/humanizer.core.2.14.1.nupkg.sha512",
     "/Users/onurarifciftci/.nuget/packages/microsoft.aspnetcore.openapi/9.0.1/microsoft.aspnetcore.openapi.9.0.1.nupkg.sha512",

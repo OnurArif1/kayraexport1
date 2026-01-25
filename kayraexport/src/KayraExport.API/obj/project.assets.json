@@ -3923,11 +3923,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/onurarifciftci/Desktop/kayraexport/src/KayraExport.API/KayraExport.API.csproj",
+      "projectUniqueName": "/Users/onurarifciftci/kayraexport1/kayraexport/src/KayraExport.API/KayraExport.API.csproj",
       "projectName": "KayraExport.API",
-      "projectPath": "/Users/onurarifciftci/Desktop/kayraexport/src/KayraExport.API/KayraExport.API.csproj",
+      "projectPath": "/Users/onurarifciftci/kayraexport1/kayraexport/src/KayraExport.API/KayraExport.API.csproj",
       "packagesPath": "/Users/onurarifciftci/.nuget/packages/",
-      "outputPath": "/Users/onurarifciftci/Desktop/kayraexport/src/KayraExport.API/obj/",
+      "outputPath": "/Users/onurarifciftci/kayraexport1/kayraexport/src/KayraExport.API/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/onurarifciftci/.nuget/NuGet/NuGet.Config"

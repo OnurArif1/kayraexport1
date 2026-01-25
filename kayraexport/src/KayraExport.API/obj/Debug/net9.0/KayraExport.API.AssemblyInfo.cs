@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("KayraExport.API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f1b3f2a3a5f0ff62e5252b95bdd43b6eb34632ad")]
 [assembly: System.Reflection.AssemblyProductAttribute("KayraExport.API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("KayraExport.API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
