@@ -240,5 +240,62 @@ export default {
     addPartyToRoom: {
         addPartyToRoom: 'Odaya Party Ekle',
         selectParty: 'Bir Party Seçin'
+    },
+    product: {
+        title: 'Ürünler',
+        list: 'Ürün Listesi',
+        add: 'Yeni Ürün Ekle',
+        edit: 'Ürün Düzenle',
+        delete: 'Ürün Sil',
+        id: 'Id',
+        name: 'Ad',
+        description: 'Açıklama',
+        price: 'Fiyat',
+        stock: 'Stok',
+        operations: 'İşlemler',
+        searchPlaceholder: 'Ara (ad, açıklama)',
+        search: 'Ara',
+        newProduct: 'Yeni Ürün',
+        update: 'Güncelle',
+        deleteTooltip: 'Sil',
+        nameRequired: 'Ürün adı zorunludur.',
+        nameLabel: 'Ürün Adı',
+        descriptionLabel: 'Açıklama',
+        priceLabel: 'Fiyat (₺)',
+        stockLabel: 'Stok',
+        namePlaceholder: 'Örn. Laptop',
+        descriptionPlaceholder: 'Kısa açıklama',
+        save: 'Kaydet',
+        cancel: 'İptal',
+        updateButton: 'Güncelle',
+        deleteDialogTitle: 'Ürün Sil',
+        deleteConfirm: 'ürününü silmek istediğinize emin misiniz?',
+        loadingError: 'Ürünler yüklenirken hata oluştu.',
+        deleteError: 'Ürün silinirken hata oluştu.',
+        addError: 'Ürün eklenirken hata oluştu.',
+        updateError: 'Ürün güncellenirken hata oluştu.',
+        loadError: 'Ürün yüklenirken hata oluştu.',
+        invalidProduct: 'Geçersiz ürün.',
+        added: 'Ürün eklendi.',
+        updated: 'Ürün güncellendi.',
+        deleted: 'Ürün silindi.',
+        warning: 'Uyarı',
+        success: 'Başarılı',
+        error: 'Hata'
+    },
+    dashboard: {
+        welcome: 'Hoş Geldiniz',
+        welcomeMessage: 'Ürün ekleme ve listeleme uygulamasına hoş geldiniz. Soldan <strong>Ürün Listesi</strong> veya <strong>Ürün Ekle</strong> ile devam edebilirsiniz.',
+        productList: 'Ürün Listesi',
+        addProduct: 'Ürün Ekle'
+    },
+    menu: {
+        mainMenu: 'Ana Menü',
+        dashboard: 'Gösterge Paneli',
+        productList: 'Ürün Listesi',
+        addProduct: 'Ürün Ekle'
+    },
+    topbar: {
+        productAdmin: 'Ürün Admin'
     }
 };

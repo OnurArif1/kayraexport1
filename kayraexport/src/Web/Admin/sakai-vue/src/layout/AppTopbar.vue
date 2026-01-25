@@ -1,9 +1,11 @@
 <script setup>
 import { ref, watch, onMounted } from 'vue';
+import { useI18n as useVueI18n } from 'vue-i18n';
 import { useI18n } from '@/composables/useI18n';
 import { useLayout } from '@/layout/composables/layout';
 
 const { locale, setLocale } = useI18n();
+const { t } = useVueI18n();
 const { toggleDarkMode, isDarkTheme } = useLayout();
 
 const languages = [
@@ -35,7 +37,7 @@ const changeLanguage = (event) => {
 <template>
     <div class="layout-topbar">
         <div class="layout-topbar-logo-container">
-            <span class="layout-topbar-logo">Ürün Admin</span>
+            <span class="layout-topbar-logo">{{ t('topbar.productAdmin') }}</span>
         </div>
 
         <div class="layout-topbar-actions">

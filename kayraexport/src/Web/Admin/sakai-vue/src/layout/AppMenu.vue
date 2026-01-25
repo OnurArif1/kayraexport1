@@ -1,16 +1,20 @@
 <script setup>
+import { computed } from 'vue';
+import { useI18n } from 'vue-i18n';
 import AppMenuItem from './AppMenuItem.vue';
 
-const model = [
+const { t } = useI18n();
+
+const model = computed(() => [
     {
-        label: 'Ana Menü',
+        label: t('menu.mainMenu'),
         items: [
-            { label: 'Gösterge Paneli', icon: 'pi pi-fw pi-home', to: '/' },
-            { label: 'Ürün Listesi', icon: 'pi pi-fw pi-list', to: '/products' },
-            { label: 'Ürün Ekle', icon: 'pi pi-fw pi-plus', to: '/products/new' }
+            { label: t('menu.dashboard'), icon: 'pi pi-fw pi-home', to: '/' },
+            { label: t('menu.productList'), icon: 'pi pi-fw pi-list', to: '/products' },
+            { label: t('menu.addProduct'), icon: 'pi pi-fw pi-plus', to: '/products/new' }
         ]
     }
-];
+]);
 </script>
 
 <template>

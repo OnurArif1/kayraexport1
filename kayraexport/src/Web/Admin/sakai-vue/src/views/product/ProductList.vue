@@ -2,7 +2,10 @@
 import { ref, onMounted } from 'vue';
 import { useRouter } from 'vue-router';
 import { useToast } from 'primevue/usetoast';
+import { useI18n } from 'vue-i18n';
 import { getProducts, deleteProduct } from '@/service/ProductService';
+
+const { t } = useI18n();
 
 const router = useRouter();
 const toast = useToast();
@@ -26,8 +29,8 @@ async function load() {
         products.value = res.products ?? [];
         totalItems.value = res.totalItems ?? 0;
     } catch (err) {
-        const msg = err.response?.data?.error ?? err.message ?? 'Ürünler yüklenirken hata oluştu.';
-        toast.add({ severity: 'error', summary: 'Hata', detail: msg, life: 4000 });
+        const msg = err.response?.data?.error ?? err.message ?? t('product.loadingError');
+        toast.add({ severity: 'error', summary: t('product.error'), detail: msg, life: 4000 });
     } finally {
         loading.value = false;
     }
@@ -65,11 +68,11 @@ async function doDelete() {
         await deleteProduct(selectedProduct.value.id);
         deleteDialog.value = false;
         selectedProduct.value = null;
-        toast.add({ severity: 'success', summary: 'Başarılı', detail: 'Ürün silindi.', life: 3000 });
+        toast.add({ severity: 'success', summary: t('product.success'), detail: t('product.deleted'), life: 3000 });
         await load();
     } catch (err) {
-        const msg = err.response?.data?.error ?? err.message ?? 'Ürün silinirken hata oluştu.';
-        toast.add({ severity: 'error', summary: 'Hata', detail: msg, life: 4000 });
+        const msg = err.response?.data?.error ?? err.message ?? t('product.deleteError');
+        toast.add({ severity: 'error', summary: t('product.error'), detail: msg, life: 4000 });
     }
 }
 </script>
@@ -80,18 +83,18 @@ async function doDelete() {
             <div class="col-12">
                 <div class="card">
                     <div class="flex flex-wrap align-items-center justify-content-between gap-2 mb-3">
-                        <h5 class="m-0">Ürün Listesi</h5>
-                        <Button label="Yeni Ürün" icon="pi pi-plus" @click="goToAdd" />
+                        <h5 class="m-0">{{ t('product.list') }}</h5>
+                        <Button :label="t('product.newProduct')" icon="pi pi-plus" @click="goToAdd" />
                     </div>
                     <div class="flex flex-wrap gap-2 mb-3">
                         <InputText
                             v-model="searchTerm"
-                            placeholder="Ara (ad, açıklama)"
+                            :placeholder="t('product.searchPlaceholder')"
                             class="flex-1"
                             style="min-width: 200px"
                             @keyup.enter="onSearch"
                         />
-                        <Button label="Ara" icon="pi pi-search" @click="onSearch" />
+                        <Button :label="t('product.search')" icon="pi pi-search" @click="onSearch" />
                     </div>
                     <DataTable
                         :value="products"
@@ -108,20 +111,20 @@ async function doDelete() {
                         striped-rows
                         responsive-layout="scroll"
                     >
-                        <Column field="id" header="Id" style="width: 5rem" />
-                        <Column field="name" header="Ad" />
-                        <Column field="description" header="Açıklama" />
-                        <Column field="price" header="Fiyat">
+                        <Column field="id" :header="t('product.id')" style="width: 5rem" />
+                        <Column field="name" :header="t('product.name')" />
+                        <Column field="description" :header="t('product.description')" />
+                        <Column field="price" :header="t('product.price')">
                             <template #body="{ data }">
                                 {{ Number(data.price).toLocaleString('tr-TR') }} ₺
                             </template>
                         </Column>
-                        <Column field="stock" header="Stok" style="width: 6rem" />
-                        <Column header="İşlemler" style="width: 10rem">
+                        <Column field="stock" :header="t('product.stock')" style="width: 6rem" />
+                        <Column :header="t('product.operations')" style="width: 10rem">
                             <template #body="{ data }">
                                 <div class="flex gap-1">
-                                    <Button icon="pi pi-pencil" severity="secondary" text rounded size="small" v-tooltip.top="'Güncelle'" @click="goToEdit(data)" />
-                                    <Button icon="pi pi-trash" severity="danger" text rounded size="small" v-tooltip.top="'Sil'" @click="confirmDelete(data)" />
+                                    <Button icon="pi pi-pencil" severity="secondary" text rounded size="small" v-tooltip.top="t('product.update')" @click="goToEdit(data)" />
+                                    <Button icon="pi pi-trash" severity="danger" text rounded size="small" v-tooltip.top="t('product.deleteTooltip')" @click="confirmDelete(data)" />
                                 </div>
                             </template>
                         </Column>
@@ -130,13 +133,13 @@ async function doDelete() {
             </div>
         </div>
 
-        <Dialog :visible="deleteDialog" header="Ürün Sil" modal :closable="true" :style="{ width: '400px' }" @update:visible="deleteDialog = $event">
+        <Dialog :visible="deleteDialog" :header="t('product.deleteDialogTitle')" modal :closable="true" :style="{ width: '400px' }" @update:visible="deleteDialog = $event">
             <p v-if="selectedProduct">
-                <strong>{{ selectedProduct.name }}</strong> ürününü silmek istediğinize emin misiniz?
+                <strong>{{ selectedProduct.name }}</strong> {{ t('product.deleteConfirm') }}
             </p>
             <template #footer>
-                <Button label="İptal" severity="secondary" @click="deleteDialog = false" />
-                <Button label="Sil" severity="danger" @click="doDelete" />
+                <Button :label="t('product.cancel')" severity="secondary" @click="deleteDialog = false" />
+                <Button :label="t('common.delete')" severity="danger" @click="doDelete" />
             </template>
         </Dialog>
     </div>

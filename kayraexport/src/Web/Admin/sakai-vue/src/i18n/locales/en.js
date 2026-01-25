@@ -222,5 +222,62 @@ export default {
     addPartyToRoom: {
         addPartyToRoom: 'Add Party To Room',
         selectParty: 'Select a Party'
+    },
+    product: {
+        title: 'Products',
+        list: 'Product List',
+        add: 'Add New Product',
+        edit: 'Edit Product',
+        delete: 'Delete Product',
+        id: 'Id',
+        name: 'Name',
+        description: 'Description',
+        price: 'Price',
+        stock: 'Stock',
+        operations: 'Operations',
+        searchPlaceholder: 'Search (name, description)',
+        search: 'Search',
+        newProduct: 'New Product',
+        update: 'Update',
+        deleteTooltip: 'Delete',
+        nameRequired: 'Product name is required.',
+        nameLabel: 'Product Name',
+        descriptionLabel: 'Description',
+        priceLabel: 'Price (₺)',
+        stockLabel: 'Stock',
+        namePlaceholder: 'E.g. Laptop',
+        descriptionPlaceholder: 'Short description',
+        save: 'Save',
+        cancel: 'Cancel',
+        updateButton: 'Update',
+        deleteDialogTitle: 'Delete Product',
+        deleteConfirm: 'Are you sure you want to delete the product',
+        loadingError: 'Error loading products.',
+        deleteError: 'Error deleting product.',
+        addError: 'Error adding product.',
+        updateError: 'Error updating product.',
+        loadError: 'Error loading product.',
+        invalidProduct: 'Invalid product.',
+        added: 'Product added.',
+        updated: 'Product updated.',
+        deleted: 'Product deleted.',
+        warning: 'Warning',
+        success: 'Success',
+        error: 'Error'
+    },
+    dashboard: {
+        welcome: 'Welcome',
+        welcomeMessage: 'Welcome to the product management application. You can continue with <strong>Product List</strong> or <strong>Add Product</strong> from the left menu.',
+        productList: 'Product List',
+        addProduct: 'Add Product'
+    },
+    menu: {
+        mainMenu: 'Main Menu',
+        dashboard: 'Dashboard',
+        productList: 'Product List',
+        addProduct: 'Add Product'
+    },
+    topbar: {
+        productAdmin: 'Product Admin'
     }
 };

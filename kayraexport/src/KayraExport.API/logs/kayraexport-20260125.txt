@@ -4,3 +4,9 @@
 2026-01-25 14:47:24.078 +03:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
 2026-01-25 14:47:41.348 +03:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
 2026-01-25 14:47:41.348 +03:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2026-01-25 14:51:04.647 +03:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2026-01-25 14:51:04.647 +03:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2026-01-25 14:52:59.478 +03:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2026-01-25 14:53:10.274 +03:00 [WRN] Failed to determine the https port for redirect.
+d exception messages may include sensitive application data; this mode should only be enabled during development.
+2026-01-25 14:53:10.274 +03:00 [WRN] Failed to determine the https port for redirect.
