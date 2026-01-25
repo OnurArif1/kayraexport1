@@ -11,7 +11,6 @@ Log.Logger = new LoggerConfiguration()
     .ReadFrom.Configuration(builder.Configuration)
     .Enrich.FromLogContext()
     .WriteTo.Console()
-    .WriteTo.File("logs/kayraexport-.txt", rollingInterval: RollingInterval.Day)
     .CreateLogger();
 
 builder.Host.UseSerilog();
@@ -40,7 +39,7 @@ builder.Services.AddSwaggerGen(c =>
     {
         Title = "Product API",
         Version = "v1",
-        Description = "Ürün ekleme ve listeleme API'si (Controller-Service-Repository)"
+        Description = "(Controller-Service-Repository)"
     });
 });
 
@@ -86,7 +85,7 @@ try
 }
 catch (Exception ex)
 {
-    Log.Fatal(ex, "Uygulama başlatılamadı");
+    Log.Fatal(ex, "An error accured while the processing request");
 }
 finally
 {
